@@ -1,11 +1,13 @@
 :root {
-    --bg-color:#f5f5f5;
-    --text-color:#6c757d;
-    --accent-color:#ffd333;
-    --contrast-color:#3d464d;
+    --bg-color: #f5f5f5;
+    --text-color: #6c757d;
+    --accent-color: #ffd333;
+    --contrast-color: #3d464d;
+    --gray-color: #ccc;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -41,8 +43,37 @@ main.main {
     flex: 1 1 auto;
 }
 
-.btn, .dropdown-menu {
+.btn,
+.dropdown-menu,
+.form-control {
     border-radius: 0;
+}
+
+.form-control:focus {
+    color: var(--text-color);
+    border-color: var(--accent-color);
+}
+
+.form-control::placeholder {
+    color: var(--gray-color);
+}
+
+.btn-warning {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.btn-outline-warning {
+    border-color: var(--accent-color);
+}
+
+.bg-warning {
+    background-color: var(--accent-color) !important;
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
 }
 
 /* ============================ Header rules ================================= */
@@ -79,4 +110,22 @@ ul.social-icons a:hover {
 
 .header-top .btn {
     background-color: var(--bs-body-bg);
+}
+
+.header-logo {
+    color: var(--accent-color);
+    transition: all .3s;
+}
+
+.header-logo:hover {
+    color: var(--contrast-color);
+}
+
+.cart-buttons .btn {
+    color: var(--contrast-color);
+    transition: all .3s;
+}
+
+.cart-buttons .btn:hover {
+    border: 1px solid var(--contrast-color);
 }
