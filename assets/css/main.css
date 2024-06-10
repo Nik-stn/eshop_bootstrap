@@ -135,7 +135,8 @@ ul.social-icons a:hover {
     box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
 
-.header-bottom .navbar{
+.header-bottom .navbar,
+.header-bottom .navbar .dropdown-menu {
     background-color: var(--contrast-color) !important;
 }
 
@@ -174,6 +175,6 @@ ul.social-icons a:hover {
 
 @media only screen and (max-width: 992px) {
     .header-bottom .navbar .dropdown-menu .dropdown-menu {
-       padding-left: 1rem;
+        padding-left: 1rem;
     }
 }
