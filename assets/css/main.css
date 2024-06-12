@@ -190,6 +190,11 @@ ul.social-icons a:hover {
     margin-top: 7px;
 }
 
+.headernav-scroll.header-bottom .navbar .offcanvas:not(.show) .nav-link {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
 /* ============================ Header ================================= */
 
 /* ============================ Main  ================================= */
@@ -202,13 +207,9 @@ ul.social-icons a:hover {
     font-size: 1.5rem;
 }
 /* ============================ Carousel ================================= */
+
 /* ============================ Advantages ================================= */
-.advantages .items {
-    margin-top: 50px;
-
-}
-
-.advantages .items .item {
+.advantages .item {
     background-color: var(--bs-white);
     text-align: center;
     padding: 1rem;
@@ -218,7 +219,7 @@ ul.social-icons a:hover {
     transition: all .3s;
 }
 
-.advantages .items .item:hover {
+.advantages .item:hover {
     box-shadow: 0 15px 30px -20px rgba(0, 0, 0, 0.5);
 }
 
@@ -240,8 +241,8 @@ ul.social-icons a:hover {
     }
 }
 
-@media only screen and (max-width: 992px) {
-    .header-bottom .navbar .dropdown-menu .dropdown-menu {
+@media only screen and (max-width: 991px) {
+    .header-bottom .navbar .dropdown-menu {
         padding-left: 1rem;
     }
 }
