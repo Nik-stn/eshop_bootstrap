@@ -232,8 +232,6 @@ ul.social-icons a:hover {
 /* ============================ Advantages ================================= */
 
 /* ============================ Featured-products ================================= */
-
-/* ============================ Product card ================================= */
 .product-card {
     transition: all .3s;
     border: 1px solid var(--gray-color);
@@ -319,9 +317,14 @@ ul.social-icons a:hover {
     text-decoration: line-through;
     font-size: 0.8rem;
 }
-/* ============================ Product card ================================= */
-
 /* ============================ Featured-products ================================= */
+
+/* ============================ New-products ================================= */
+.owl-carousel-full .owl-item img {
+    display: inline-block;
+    width: auto;
+}
+/* ============================ New-products ================================= */
 
 
 /* ============================ Main  ================================= */
