@@ -5,16 +5,19 @@ window.addEventListener('scroll', function() {
 const offcanvasCartEl = document.getElementById('offcanvasCart');
 const offcanvasCart = new bootstrap.Offcanvas(offcanvasCartEl);
 
-document.querySelectorAll('.closecart').forEach(item => {
-    item.addEventListener('click', (e) => {
+document.getElementById('cart-open').addEventListener('click', (e) => {
+    e.preventDefault();
+    offcanvasCart.toggle();
+});
+
+document.querySelectorAll('.closecart').forEach( item => {
+    item.addEventListener('click',  (e) => {
         e.preventDefault();
         offcanvasCart.hide();
-        let href = item.href.split('#').pop();
-        offcanvasCartEl.addEventListener('hidden.bs.offcanvas', () => {
-            document.getElementById(href).scrollIntoView();
-        })
-    })
-})
+        let href = item.dataset.href;
+        document.getElementById(href).scrollIntoView();
+    });
+});
 
 $(document).ready(function(){
     $(window).scroll(function() {

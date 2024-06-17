@@ -77,23 +77,11 @@
                 <div class="container-fluid">
                     <div class="row align-items-center">
 
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-sm-6">
                             <a href="index.html" class="header-logo h1 text-uppercase text-decoration-none">E-Shop</a>
                         </div>
-
-                        <!--cart-buttons-->
-                        <div class="col-md-4 cart-buttons text-end order-md-2 d-none d-lg-block">
-                            <a href="#" class="btn p-1">
-                                <i class="fa-solid fa-heart"></i>
-                                <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
-                            </a>
-                            <button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
-                            </button>
-                        </div><!--cart-buttons-->
-
-                        <div class="col-lg-4 col-sm-6 order-md-1 mt-2 mt-md-0">
+                      
+                        <div class="col-sm-6 mt-2 mt-md-0">
                             <form action="">
                                 <div class="input-group">
                                     <input type="text" class="form-control shadow-none" name="search" placeholder="Searching..." aria-label="Searching..." aria-describedby="button-search">
@@ -104,27 +92,7 @@
 
                     </div>
                 </div>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasCartLabel">Cart</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <div>
-                      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                    </div>
-                    <div class="dropdown mt-3">
-                      <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown">
-                        Dropdown button
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item closecart" href="#footer" data-href="footer">Footer</a></li>
-                        <li><a class="dropdown-item closecart" href="#about" data-href="about">About</a></li>
-                        <li><a class="dropdown-item closecart" href="#map" data-href="map">Map</a></li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
+                
             </div> <!-- ./header-middle -->
 
           </header>
@@ -195,20 +163,44 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="d-block d-lg-none">
+
+                    <div class="d-block">
                       <a href="#" class="btn p-1">
                         <i class="fa-solid fa-heart"></i>
                         <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
                       </a>
-                      <button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                      <button class="btn p-1" id="cart-open" type="button" data-bs-toggle="offcanvas2" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
                           <i class="fa-solid fa-cart-shopping"></i>
                           <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
                       </button>
                     </div>
+                    
                   </div>
                 </nav>
           </div><!-- ./header-bottom -->
     
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasCartLabel">Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+              </div>
+              <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item closecart" href="#footer" data-href="footer">Footer</a></li>
+                  <li><a class="dropdown-item closecart" href="#about" data-href="about">About</a></li>
+                  <li><a class="dropdown-item closecart" href="#map" data-href="map">Map</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
         <main class="main ">
           <!-- carousel -->
           <div id="carousel" class="carousel slide carousel-fade">
