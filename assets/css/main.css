@@ -449,6 +449,17 @@ footer a:hover {
 .filter-block .badge {
     color: var(--text-color);
 }
+
+.page-link {
+    color: var(--contrast-color);
+}
+
+.page-link:hover, .active>.page-link, .page-link.active {
+    color: var(--bs-white);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
 /* ============================ Category page  ================================= */
 
 
