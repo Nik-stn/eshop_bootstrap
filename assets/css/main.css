@@ -105,6 +105,12 @@ section {
     color: var(--contrast-color);
 }
 
+label.required::before {   
+    content: "* ";
+    color: #dc3545;
+    font-weight: bold;
+}
+
 /* ============================ General ================================= */
 
 /* ============================ Header ================================= */
@@ -353,7 +359,7 @@ ul.social-icons a:hover {
 .about-us,
 .about-us .section-title span,
 .sidebar .section-title span,
-.product-content .section-title span {
+.bg-white .section-title span{
     background-color: var(--bs-white);
 }
 
