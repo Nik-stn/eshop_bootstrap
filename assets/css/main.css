@@ -74,11 +74,13 @@ section {
 
 .btn,
 .dropdown-menu,
-.form-control {
+.form-control,
+.form-select {
     border-radius: 0;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
     color: var(--text-color);
     border-color: var(--accent-color);
     box-shadow: none;
@@ -515,6 +517,14 @@ footer a:hover {
 
 .tab-content {
     padding-top: 20px;
+}
+
+.product-rating i {
+ color: var(--gray-color);
+}
+
+.product-rating i.active {
+    color: var(--accent-color);
 }
 /* ============================ Product page  ================================= */
 
