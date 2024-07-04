@@ -526,6 +526,11 @@ footer a:hover {
 .product-rating i.active {
     color: var(--accent-color);
 }
+
+.product-review-header .review-date {
+    color: var(--gray-color);
+}
+
 /* ============================ Product page  ================================= */
 
 /* ============================ Cart page  ================================= */
