@@ -248,7 +248,7 @@
             </div><!-- ./breadcrumbs -->
 
             <div class="container-fluid">
-              <form action="" class="needs-validation" novalidate>
+              <form action="" class="needs-validation" id="checkoutForm" novalidate>
 
                 <div class="row">
                   <div class="col-lg-8 mb-3">
@@ -282,7 +282,9 @@
 
                         <div class="col-md-6">
                           <label for="city" class="form-label">City</label>
-                          <input type="text" name="city" id="city" class="form-control" placeholder="New York" aria-label="City" required>
+                          <select id="city" name="city" class="form-select" aria-label="City" required>
+                            
+                          </select>
                         </div>
 
                         <div class="col-md-6">
@@ -427,15 +429,45 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      fetch('/assets/js/countries.json') 
-      .then((res) => res.json())
-      .then((json) => {
-          let html = '';
-          json['countries'].forEach((el) => {
-              html += `<option value='${el.code}'>${el.name}</option>`;
-          });
-          document.getElementById('country').innerHTML = html;
+    <script type="module">
+      // fetch('/assets/js/countries.json') 
+      // .then((res) => res.json())
+      // .then((json) => {
+      //     let html = '';
+      //     json['countries'].forEach((el) => {
+      //         html += `<option value='${el.code}'>${el.name}</option>`;
+      //     });
+      //     document.getElementById('country').innerHTML = html;
+      // });
+
+      const countryField = document.getElementById('country');
+      const cityField = document.getElementById('city');
+      let res = await fetch('/assets/countries.json');
+      const data = await res.json();
+
+      function getCountries() {
+        let html = '';
+        for (let country in data) {
+          html += `<option value='${country}'>${country}</option>`;
+        }
+        countryField.innerHTML = html;
+      }
+
+      function getCities(country = '') {
+        let html = '';
+        if (!country) {
+          country = Object.keys(data)[0];
+        }
+        for (let city of data[country]) {
+          html += `<option value='${city}'>${city}</option>`;
+        }
+        cityField.innerHTML = html;
+      }
+      getCountries();
+      getCities();
+
+      countryField.addEventListener('change', function () {
+        getCities(this.value)
       });
     </script>
 </body>
