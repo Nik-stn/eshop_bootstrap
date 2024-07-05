@@ -248,7 +248,11 @@
             </div><!-- ./breadcrumbs -->
 
             <div class="container-fluid">
-              <form action="" class="needs-validation" id="checkoutForm" novalidate>
+              <form action="" class="needs-validation position-relative" id="checkoutForm" novalidate>
+
+                <div class="ajax-loader position-absolute top-0 start-0 bottom-0 end-0 z-3" id="ajaxLoader">
+                  <img class="position-absolute top-50 start-50 translate-middle" src="assets/img/ripple.svg" alt="">
+                </div>
 
                 <div class="row">
                   <div class="col-lg-8 mb-3">
@@ -463,11 +467,20 @@
         }
         cityField.innerHTML = html;
       }
+
+      function getLoader() {
+        document.getElementById('ajaxLoader').classList.toggle('fade');
+      }
+
       getCountries();
       getCities();
 
       countryField.addEventListener('change', function () {
-        getCities(this.value)
+        getLoader();
+        setTimeout( () => {
+          getCities(this.value);
+          getLoader();
+        }, 1000);
       });
     </script>
 </body>
